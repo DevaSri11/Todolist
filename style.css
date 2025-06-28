@@ -1,0 +1,229 @@
+   body {
+      background-image: url('https://img.freepik.com/premium-photo/laptop-black-desktop-with-cup-coffee-phone-wi-fi-sign-work-social-networks-top-view-high-quality-photo_96727-1358.jpg');
+      background-size: cover;
+            background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      font-family: 'Merienda', cursive;
+      color: #ffffff;
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.92);
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+      border: 1px solid #ccc;
+      margin: 20px;
+      font-family: 'Merienda', cursive;
+      color: #2e2e2e;
+      position: relative;
+      overflow: hidden;
+      left: 100px;
+    }
+
+    .card-title {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #8B0000;
+    }
+
+    .form-control {
+      background-color: #fdf9f6;
+      border: 1px solid #ccc;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    #addBtn {
+      background-color: #8B0000;
+      border: none;
+      color: white;
+      font-size: 1.2rem;
+    }
+
+    #addBtn:hover {
+      background-color: #600000;
+    }
+
+    .btn-close {
+      background-color: #ffffffb4;
+    }
+
+    .badge-style {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fffaf7;
+      border: 1px solid #ddd;
+      padding: 10px 16px;
+      border-radius: 15px;
+      margin: 10px auto;
+      font-weight: bold;
+      width: 90%;
+      max-width: 500px;
+      font-family: 'Merienda', cursive;
+      color: #e30c0c;
+      box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .decoration {
+      text-decoration: line-through;
+      color: #600000;
+    }
+
+    ::placeholder {
+      color: #a68d7a;
+    }
+    #offcanvasRight {
+        width: 700px;
+    }
+    .clock {
+      position: fixed;
+      top: 60px;          
+      right: 400px;        
+      width: 200px;
+      height: 200px;
+      border: 2px solid #eee;
+      border-radius: 50%;
+      background-color: transparent;
+      color: #f8e4c4;
+      font-weight: bold;
+      font-family: 'Merienda', cursive;
+      z-index: 2;
+    }
+
+    #t, #th, #s, #n {
+      position: absolute;
+      font-size: 30px;
+      padding: 8px;
+      color: #eee;
+    }
+
+    #t {
+      top: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    #th {
+      top: 50%;
+      right: 5px;
+      transform: translateY(-50%);
+    }
+
+    #s {
+      bottom: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    #n {
+      top: 50%;
+      left: 5px;
+      transform: translateY(-50%);
+    }
+
+    #second {
+      width: 3px;
+      height: 60px;
+      position: absolute;
+      bottom: 50%;
+      left: 50%;
+      border-radius: 40%;
+      transform-origin: bottom center;
+      animation: roll 30s linear infinite;
+      background-color: antiquewhite;
+      z-index: 1;
+    }
+    #hour {
+      width: 4px;
+      height: 35px;
+      background-color: rgb(255, 107, 107);
+      z-index: 1;
+      position: absolute;
+      bottom: 50%;
+      left: 50%;
+      transform-origin: bottom center;
+      transform: rotate(45deg); 
+      border-radius: 40%;
+    }
+
+    #minute {
+      width: 3px;
+      height: 45px;
+      background-color: #686262;
+      z-index: 2;
+      position: absolute;
+      bottom: 50%;
+      left: 50%;
+      transform-origin: bottom center;
+      transform: rotate(90deg); 
+      border-radius: 40%;
+    }
+    @keyframes roll {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    .text{
+      font-size: xx-large;
+      color: black;
+    }
+   
+    #stickyGrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 15px;
+      margin-top: 20px;
+      max-width: 690px; 
+      margin-left: 1300px;
+    }
+
+
+    
+    .sticky-note {
+      width: 300px;
+      height: 300px;
+      background-color: #333;
+      border-radius: 10px;
+      padding: 10px;
+      position: relative;
+      box-shadow: 2px 2px 10px black;
+      font-family: 'Merienda', cursive;
+    }
+
+    
+    .sticky-note textarea {
+      width: 100%;
+      height: 100%;
+      border: black;
+      background: transparent;
+      font-family: 'Merienda', cursive;
+      font-size: 14px;
+      color: antiquewhite;
+      outline: none;
+    }
+
+    
+    .sticky-note .btn-close {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background-color: rgba(255,255,255,0.7);
+      border-radius: 50%;
+    }
+    #stick{
+      margin-right: 50px;
+    }
+    .quote-card {
+      top: 150px;        
+      z-index: 5;
+      transform: rotate(-17deg);
+      margin-left: 0%;
+      right: 2000px;
+      color: black;
+    }
+
