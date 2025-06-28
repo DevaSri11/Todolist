@@ -26,10 +26,20 @@
     const text = input.value.trim();
     const dueDate = document.getElementById("taskDate").value;
     const category = document.querySelector("input[name='category']:checked");
+    if (!text) {
+        showToast("Please enter a task.");
+        return;
+    }
 
-    if (!text) return alert("Please enter a task.");
-    if (!category) return alert("Please select a category.");
-    if (!dueDate) return alert("Please select a due date.");
+    if (!category) {
+        showToast("Please select a category.");
+        return;
+    }
+
+    if (!dueDate) {
+        showToast("Please select a due date.");
+        return;
+    }
 
     const task = {
       id: Date.now(),
@@ -76,7 +86,7 @@
     closeBtn.type = "button";
     closeBtn.className = "btn-close ms-2";
 
-    // Sync logic
+    //sync
     checkbox.addEventListener("change", () => syncCallback(checkbox.checked, textSpan, badge));
 
     
@@ -99,9 +109,13 @@
     const impCon = document.getElementById("impcon");
 
     const deleteTask = () => {
-      const data = loadFromLocalStorage();
-      data.tasks = data.tasks.filter(t => t.id !== task.id);
-      saveToLocalStorage(data);
+   
+    if (badgeMain) badgeMain.remove();
+    if (badgeSide) badgeSide.remove();
+
+    const data = loadFromLocalStorage();
+    data.tasks = data.tasks.filter(t => t.id !== task.id);
+    saveToLocalStorage(data);
     };
 
     let badgeMain, badgeSide;
@@ -184,4 +198,10 @@
 
   display.textContent = quote;
   document.getElementById("quoteArea").value = "";
+}
+function showToast(message) {
+  const toastMsg = document.getElementById("toastMsg");
+  toastMsg.textContent = message;
+  const toastElement = new bootstrap.Toast(document.getElementById('liveToast'));
+  toastElement.show();
 }
